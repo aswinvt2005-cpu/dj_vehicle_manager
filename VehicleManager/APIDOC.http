@@ -1,0 +1,76 @@
+###
+POST http://127.0.0.1:8000/api/vehicles/
+Content-Type: application/json
+
+{
+    "vehicle_name": "Swift",
+    "vehicle_number": "KL 13 AB 1234",
+    "vehicle_type": "Car",
+    "brand": "Maruti Suzuki",
+    "rent_per_day": 1500,
+    "fuel_type": "Petrol",
+    "is_available": true
+}
+
+
+###
+GET http://127.0.0.1:8000/api/vehicles/
+
+
+### 
+GET http://127.0.0.1:8000/api/vehicles/1/
+
+
+### 
+PUT http://127.0.0.1:8000/api/vehicles/1/
+Content-Type: application/json
+
+{
+    "vehicle_name": "Swift Dzire",
+    "vehicle_number": "KL 13 AB 1234",
+    "vehicle_type": "Car",
+    "brand": "Maruti Suzuki",
+    "rent_per_day": 1800,
+    "fuel_type": "Petrol",
+    "is_available": true
+}
+
+
+### 
+DELETE http://127.0.0.1:8000/api/vehicles/1/
+
+
+### 
+POST http://127.0.0.1:8000/api/customers/
+Content-Type: application/json
+
+{
+    "name": "Aswin",
+    "email": "aswin@example.com",
+    "phone": "9876543210",
+    "address": "Kannur, Kerala"
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/customers/
+
+
+### 
+POST http://127.0.0.1:8000/api/rentals/
+Content-Type: application/json
+
+{
+    "vehicle_id": 1,
+    "customer_id": 1,
+    "rent_date": "2026-11-10",
+    "return_date": "2026-11-13"
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/rentals/
+
+
+### 
+PUT http://127.0.0.1:8000/api/return-vehicle/1/
